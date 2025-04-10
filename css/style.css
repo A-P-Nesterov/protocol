@@ -35,17 +35,19 @@ img {
 body {
 }
 .width-content {
+  width: 1920px;
 }
 .header {
   box-sizing: border-box;
   height: 1100px;
   background-image: url(/img/bgr-img.png);
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
 }
 .header-elements {
   justify-content: space-between;
   align-items: center;
+  margin: auto;
   padding-top: 60px;
   padding-left: 120px;
   padding-right: 120px;
@@ -73,6 +75,7 @@ body {
 }
 .inform-section {
   padding-top: 550px;
+  margin: auto;
 }
 .inform-section h1 {
   padding-left: 130px;
