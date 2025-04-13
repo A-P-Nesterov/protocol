@@ -5,10 +5,10 @@
   --text-color: rgb(241, 239, 250);
   --text-color-h3: rgb(26, 9, 52);
   --light-grey-bg: rgb(241, 239, 250);
-  --gray-bg: rgb(65, 57, 67);
+  --gray-bg: linear-gradient(rgba(93, 37, 136, 0.5), rgba(212, 142, 237, 0.5));
   --violet-bg: rgb(28, 10, 45);
   --lilac-color: rgb(167, 27, 202);
-  --footer-bgr: rgb(12, 9, 50);
+  --footer-bgr: linear-gradient(rgb(41, 22, 72), rgb(13, 5, 25));
 }
 a {
   text-decoration: none;
@@ -33,24 +33,22 @@ img {
   align-items: end;
 }
 body {
+  background: var(--footer-bgr);
 }
 .width-content {
-  width: 1920px;
+  width: 1140px;
+  /* max-width: 1920px;
+  min-width: 400px; */
 }
 .header {
-  box-sizing: border-box;
-  height: 1100px;
-  background-image: url("../img/bgr-img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .header-elements {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  padding-top: 60px;
-  padding-left: 120px;
-  padding-right: 120px;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .logo {
   width: 80px;
@@ -60,7 +58,7 @@ body {
   gap: 56px;
 }
 .header-nav a {
-  font-size: 20px;
+  font-size: 14px;
   color: var(--text-color);
 }
 .external-resources {
@@ -74,14 +72,20 @@ body {
   padding: 4px;
 }
 .inform-section {
-  padding-top: 550px;
+  max-height: 900px;
+  padding-top: 145px;
   margin: auto;
+  background-image: url("../img/bgr-img.png");
+
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .inform-section h1 {
+  font-family: "Manrope", sans-serif;
   padding-left: 130px;
 }
 .h1 {
-  font-size: 147px;
+  font-size: 90px;
   color: var(--text-color);
 }
 .color-text {
@@ -92,7 +96,7 @@ body {
 }
 .description-service {
   align-items: center;
-  gap: 160px;
+  gap: 40px;
   margin-top: 40px;
   margin-left: 115px;
   margin-right: 115px;
@@ -100,7 +104,7 @@ body {
 .description-service p,
 a {
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   color: var(--text-color);
 }
 
@@ -114,22 +118,21 @@ a {
 }
 /* стили рабочей области сайта */
 .bgr {
-  background-color: var(--violet-bg);
+  /* background-color: var(--footer-bgr); */
 }
 .working-area {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 70px repeat(2, 1fr);
-  margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
-  padding-bottom: 110px;
+  margin: 130px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
   padding-top: 30px;
   gap: 20px;
-  width: 1680px;
-  height: 982px;
+  height: 682px;
   border-radius: 25px;
-  background-color: var(--gray-bg);
+  background: var(--gray-bg);
 }
 .section-h2 {
   font-size: 56px;
@@ -175,7 +178,7 @@ a {
   margin: 40px;
 }
 .img-w-h {
-  width: 428px;
+  width: 228px;
 }
 .section-connection a {
   width: 112px;
@@ -185,8 +188,83 @@ a {
   width: 112px;
   height: 112px;
 }
+
+/* стили для сукции с описанием работы сервиса */
+.service-operation h2 {
+  font-size: 40px;
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 60px;
+}
+
+.step-by-step {
+  align-items: center;
+  gap: 40px;
+}
+
+.list-step-by-ste:nth-child(1) .step-by-step {
+  margin-right: 300px;
+  margin-top: 100px;
+}
+.list-step-by-ste:nth-child(2) .step-by-step {
+  margin-top: 60px;
+}
+.list-step-by-ste:nth-child(3) .step-by-step {
+  margin-top: 60px;
+}
+.flex-start {
+  display: flex;
+  justify-content: start;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: end;
+}
+.icon {
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: var(--violet-bg);
+}
+.step-by-step p {
+  color: var(--text-color);
+  width: 280px;
+}
 /* стили для подвала сайта */
 .footer {
-  background-color: var(--footer-bgr);
-  height: 615px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.footer h2 {
+  font-size: 40px;
+  color: var(--text-color);
+}
+.footer-info-r {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-info-l {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-info-l a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-info-l-h {
+  font-size: 20px;
 }
